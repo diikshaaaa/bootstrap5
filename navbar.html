@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Bootstrap navbar</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- flex, justify content properties are applied using navbar-expand-lg -->
+  <!-- standard navigation bar is created with the .navbar class, followed by a responsive collapsing class: .navbar-expand-xxl|xl|lg|md|sm -->
+  <!-- Remove the .navbar-expand-* class to create a vertical navgiation bar -->
+  <!-- Add a white text color to all links in the navbar with the .navbar-dark class -->
+
+    
+      <div class="container">
+      <!-- container class contains gutter, padding, margin and width properties -->
+
+        <a class="navbar-brand" href="#">
+        <!-- .navbar-brand class is used to highlight the brand/logo/project name of your page -->
+        <!-- When using the .navbar-brand class with images, Bootstrap 5 will automatically style the image to fit the navbar vertically. -->
+        <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" width="70" height="30" class="d-inline-block align-top"> 
+      </a>
+
+      
+      <div class="navbar-collapse" id="navbarSupportedContent">
+      <!-- navbar-collapse class is used to apply flex properties  so that Home, Link etc stay inside the flex container -->
+
+        <ul class="navbar-nav mb-2 mb-lg-0">
+        <!-- navbar-nav applied flex, flex-direction, padding, margin etc -->
+        <!-- To add links inside the navbar, use either an <ul> element (or a <div>) with class="navbar-nav" -->
+
+            <li class="nav-item">
+            <!-- add <li> elements with a .nav-item class followed by an <a> element with a .nav-link class -->
+
+              <a class="nav-link active" href="#">Home</a>
+              <!-- navbar-nav class defines bg color, transition-color etc -->
+              <!--  add the .active class to an <a> element to highlight the current link -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+
+          <li class="nav-item dropdown">
+          <!-- nav-item class has the flex properties, margin padding ect -->
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Dropdown
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <!-- divider is added -->
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+            <!-- .disabled class to indicate that the link is un-clickable. -->
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                
+                <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <!-- SVG stands for Scalable Vector Graphics -->
+                <!-- viewBox = "min-x min-y width height" -->
+                <!-- here we are creating an image of a person -->
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z">
+                  </svg>
+            
+                </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Projects</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <!-- divider is added -->
+              <li>
+                <a class="dropdown-item" href="#">
+                  <svg class="bi bi-power" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"/>
+                    <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z"/>
+                  </svg>
+                  Log out
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <form class="d-flex">
+        <!-- d-flex class will apply flex  -->
+          <input class="form-control me-2" type="search" placeholder="Search">
+          <!-- me means margin end -->
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <ul class="nav">
+        <li class="nav-item active"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+    </ul>
+
+    <ul class="nav nav-tabs my-5" id="myTab" role="tablist">
+
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab">Profile</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab">Contact</a>
+        </li>
+
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel">Home</div>
+        <div class="tab-pane fade show" id="profile" role="tabpanel">Profile</div>
+        <div class="tab-pane fade show" id="contact" role="tabpanel">Contact</div>
+    </div>
+
+    
+    <div class="row  my-5">
+        <div class="col-3">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+
+            <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-home" role="tab">
+            <!-- if we don't use data-bs-toggle="pill" then we can't toggle.
+            Toggle refers to the act of switching from one view, setting, or function to another -->
+              Home
+            </a>
+
+            <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-profile" role="tab">
+              Profile
+            </a>
+
+            <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-messages" role="tab">
+              Messages
+            </a>
+
+            <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-settings" role="tab">
+              Settings
+            </a>
+
+          </div>
+        </div>
+        
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane active" id="v-home" role="tabpanel">
+              Home
+            </div>
+
+            <div class="tab-pane" id="v-profile" role="tabpanel">
+              Profile
+            </div>
+            
+            <div class="tab-pane" id="v-messages" role="tabpanel">
+              Message
+            </div>
+            
+            <div class="tab-pane" id="v-settings" role="tabpanel">
+              Settings
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+  
+
+
+<script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
